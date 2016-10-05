@@ -1,0 +1,40 @@
+#!/usr/bin/env python3
+
+import argparse
+import math
+import random
+import re
+
+def choose(words, nb):
+    rng = random.SystemRandom()
+
+    return [rng.choice(words) for i in range(nb)]
+
+def rolldice(wordfile, entropy, nb_words=None):
+    is_diceware = bool(re.fullmatch('[0-9]+ [\w \'-]+', wordfile.readline().strip()))
+    wordfile.seek(0)
+
+    if is_diceware:
+        words = [word.strip().split(maxsplit=1)[1] for word in wordfile]
+    else:
+        words = [word.strip() for word in wordfile]
+
+    if not nb_words:
+        nb_lines = len(words)
+        entropy_per_line = math.log(nb_lines, 2)
+        nb_words = math.ceil(entropy / entropy_per_line)
+
+    print(' '.join(choose(words, nb_words)))
+
+def main():
+    parser = argparse.ArgumentParser()
+    parser.add_argument('wordfile', type=argparse.FileType('r'))
+    group = parser.add_mutually_exclusive_group()
+    group.add_argument('--entropy', type=int, default=75)
+    group.add_argument('nb_words', type=int, nargs='?', default=None)
+    args = parser.parse_args()
+
+    rolldice(args.wordfile, args.entropy, args.nb_words)
+
+if __name__ == '__main__':
+    main()
