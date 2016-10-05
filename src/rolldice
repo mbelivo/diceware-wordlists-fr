@@ -11,7 +11,7 @@ def choose(words, nb):
     return [rng.choice(words) for i in range(nb)]
 
 def rolldice(wordfile, entropy, nb_words=None):
-    is_diceware = bool(re.fullmatch('[0-9]+ [\w \'-]+', wordfile.readline().strip()))
+    is_diceware = bool(re.fullmatch('[1-6]+ [\w \'-]+', wordfile.readline().strip()))
     wordfile.seek(0)
 
     if is_diceware:
