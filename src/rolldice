@@ -28,7 +28,7 @@ def rolldice(wordfile, entropy, nb_words=None):
         # calculate desired entropy
         entropy = nb_words * entropy_per_line
 
-    if (entropy < 64):
+    if (entropy < 50):
         print('Warning: the requested entropy of {:2.1f}bits is low.'.format(entropy),
                 file=sys.stderr)
 
@@ -45,7 +45,7 @@ def main():
     parser = argparse.ArgumentParser()
     parser.add_argument('wordfile', type=argparse.FileType('r'))
     group = parser.add_mutually_exclusive_group()
-    group.add_argument('--entropy', type=int, default=75)
+    group.add_argument('--entropy', type=int, default=64)
     group.add_argument('nb_words', type=int, nargs='?', default=None)
     args = parser.parse_args()
 

@@ -29,6 +29,7 @@ INSULT_LEMMES = [
     'youpin',
 ]
 VULGAR_LEMMES = [
+    'baiseur',
     'bite',
     'burne',
     'chier',
