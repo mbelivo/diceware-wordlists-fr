@@ -192,6 +192,8 @@ def select_typo_resistance(data, prefix_size=None, min_dist=None):
 def print_diceware_list(words, outfile, limit=None, nb_dices=None, nb_sides=6, print_dices=True):
     if nb_dices:
         limit = nb_sides**nb_dices
+        if len(words) < limit:
+            print('Warning: not enough words', file=sys.stderr)
 
     if limit:
         words.sort(key=operator.itemgetter('freq', 'freqlem'), reverse=True)
@@ -207,7 +209,7 @@ def print_diceware_list(words, outfile, limit=None, nb_dices=None, nb_sides=6, p
     try:
         locale.setlocale(locale.LC_COLLATE, 'fr_FR.UTF-8')
     except Exception as e:
-        print('warning: failed to set LC_COLLATE to fr_FR.UTF-8, sorting with default locale', file=sys.stderr)
+        print('Warning: failed to set LC_COLLATE to fr_FR.UTF-8, sorting with default locale', file=sys.stderr)
     words.sort(key=lambda word: locale.strxfrm(word['mot']))
     
     len_total = 0
