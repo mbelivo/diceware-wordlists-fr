@@ -249,13 +249,8 @@ if __name__ == '__main__':
 
     args = parser.parse_args()
 
-    min_letters = args.min_letters
-    max_letters = args.max_letters
-    nb_dices = args.nb_dices
-    valid_chars = args.char_regex
     print_dices = not args.no_print_dices
     skip_cgrams = args.skip_cgrams.split(',')
-    max_lemme_variants = args.max_lemme_variants
 
     if args.include_bad_words >= 2:
         skip_lemmes = []
@@ -264,16 +259,17 @@ if __name__ == '__main__':
     else:
         skip_lemmes = VULGAR_LEMMES + INSULT_LEMMES
 
-    data = load_lexi_file(args.LEXIQUE_FILE, min_letters=min_letters,
-                            max_letters=max_letters, valid_chars=valid_chars,
+    data = load_lexi_file(args.LEXIQUE_FILE, min_letters=args.min_letters,
+                            max_letters=args.max_letters,
+                            valid_chars=args.char_regex,
                             skip_lemmes=skip_lemmes, min_freq=0.1,
                             skip_cgrams=skip_cgrams)
 
-    data = clean_lemmes(data, max_lemme_variants=max_lemme_variants)
+    data = clean_lemmes(data, max_lemme_variants=args.max_lemme_variants)
 
     if args.unique_prefix_size or args.edit_distance:
         data = select_typo_resistance(data, args.unique_prefix_size, args.edit_distance)
 
     data = clean_homophones(data)
 
-    print_diceware_list(data, args.out, nb_dices=nb_dices, print_dices=print_dices)
+    print_diceware_list(data, args.out, nb_dices=args.nb_dices, print_dices=print_dices)
