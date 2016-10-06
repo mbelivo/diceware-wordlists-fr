@@ -16,7 +16,7 @@ wordlist_others: wordlist_short_fr_efficient.txt wordlist_fr_8k.txt
 all: wordlist wordlist_ascii wordlist_alt wordlist_others
 
 wordlist_fr.txt: $(LEXFILE)
-	$(GEN) $^ -o $@ $(FLAGS)
+	$(GEN) --max-lemme-variants=12 $^ -o $@ $(FLAGS)
 
 wordlist_short_fr.txt: $(LEXFILE)
 	$(GEN) -n4 -M5 $^ -o $@ $(FLAGS)
@@ -43,7 +43,7 @@ wordlist_short_fr_efficient.txt: $(LEXFILE)
 	$(GEN) -n4 -m2 -M4 -X --skip-cgrams='' $^ -o $@ $(FLAGS)
 
 wordlist_fr_8k.txt: $(LEXFILE)
-	$(GEN) --limit=8192 --no-print-dices $^ -o $@ $(FLAGS)
+	$(GEN) --limit=8192 --max-lemme-variants=12 --no-print-dices $^ -o $@ $(FLAGS)
 
 clean:
 	rm wordlist*.txt
