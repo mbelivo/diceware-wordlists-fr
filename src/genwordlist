@@ -189,15 +189,20 @@ def select_typo_resistance(data, prefix_size=None, min_dist=None):
 
     return new_data
     
-def print_diceware_list(words, outfile, print_dices=True, nb_dices=5, nb_sides=6):
+def print_diceware_list(words, outfile, limit=None, nb_dices=None, nb_sides=6, print_dices=True):
     if nb_dices:
-        dices = [1] * nb_dices
+        limit = nb_sides**nb_dices
+
+    if limit:
         words.sort(key=operator.itemgetter('freq', 'freqlem'), reverse=True)
-        words = words[:nb_sides**nb_dices]
-    else:
-        print_dices = False
+        words = words[:limit]
 
     nb_words = len(words)
+
+    if print_dices:
+        if not nb_dices:
+            nb_dices = math.ceil(math.log(nb_words, nb_sides))
+        dices = [1] * nb_dices
 
     try:
         locale.setlocale(locale.LC_COLLATE, 'fr_FR.UTF-8')
@@ -235,10 +240,13 @@ if __name__ == '__main__':
     parser = argparse.ArgumentParser()
     parser.add_argument('LEXIQUE_FILE', type=argparse.FileType('r'))
 
+    lenargs = parser.add_mutually_exclusive_group()
+    lenargs.add_argument('-n', '--nb-dices', type=int, default=5)
+    lenargs.add_argument('--limit', type=int)
+
     parser.add_argument('-c', '--char-regex', default='[a-zàéîôùç]')
     parser.add_argument('-M', '--max-letters', type=int, default=8)
     parser.add_argument('-m', '--min-letters', type=int, default=3)
-    parser.add_argument('-n', '--nb-dices', type=int, default=5)
     parser.add_argument('--skip-cgrams', default='ONO')
     parser.add_argument('--max-lemme-variants', type=int, default=None)
     parser.add_argument('-X', '--include-bad-words', action='count', default=0)
@@ -251,6 +259,10 @@ if __name__ == '__main__':
 
     print_dices = not args.no_print_dices
     skip_cgrams = args.skip_cgrams.split(',')
+
+    nb_dices = args.nb_dices
+    if not args.limit is None:
+        nb_dices = None
 
     if args.include_bad_words >= 2:
         skip_lemmes = []
@@ -272,4 +284,5 @@ if __name__ == '__main__':
 
     data = clean_homophones(data)
 
-    print_diceware_list(data, args.out, nb_dices=args.nb_dices, print_dices=print_dices)
+    print_diceware_list(data, args.out, limit=args.limit, nb_dices=nb_dices,
+                        print_dices=print_dices)
