@@ -19,12 +19,22 @@ def rolldice(wordfile, entropy, nb_words=None):
     else:
         words = [word.strip() for word in wordfile]
 
+    nb_lines = len(words)
+    entropy_per_line = math.log(nb_lines, 2)
     if not nb_words:
-        nb_lines = len(words)
-        entropy_per_line = math.log(nb_lines, 2)
         nb_words = math.ceil(entropy / entropy_per_line)
+    else:
+        # calculate desired entropy
+        entropy = nb_words * entropy_per_line
 
-    print(' '.join(choose(words, nb_words)))
+    while True:
+        passphrase = ' '.join(choose(words, nb_words))
+
+        # make sure we really have desired entropy, assuming [a-z] only words
+        if len(passphrase) * math.log(27, 2) > entropy:
+            break
+
+    print(passphrase)
 
 def main():
     parser = argparse.ArgumentParser()
