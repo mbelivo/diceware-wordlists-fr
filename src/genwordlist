@@ -46,7 +46,7 @@ VULGAR_LEMMES = [
 
 def load_lexi_file(file, min_letters=0, max_letters=100, valid_chars='.',
                     skip_lemmes=[], skip_cgrams=[], min_freq=0.0,
-                    skip_low_lemmes=True):
+                    skip_low_lemmes=True, non_ascii_cost=0):
     data = []
     reader = csv.DictReader(file, delimiter='\t', quoting=csv.QUOTE_NONE)
 
@@ -62,7 +62,7 @@ def load_lexi_file(file, min_letters=0, max_letters=100, valid_chars='.',
         freqbook = float(row['10_freqlivres'])
         infover = row['11_infover']
         nbletters = int(row['15_nblettres'])
-        
+
         if nbletters < min_letters or nbletters > max_letters:
             continue
 
@@ -79,6 +79,11 @@ def load_lexi_file(file, min_letters=0, max_letters=100, valid_chars='.',
 
         if re.fullmatch(valid_chars + '+', word) is None:
             continue
+
+        if non_ascii_cost:
+            cost = nbletters + len(re.findall('[^a-z]', word)) * non_ascii_cost
+            if cost > max_letters:
+                continue
 
         if (skip_low_lemmes and
                 (freqlemfilm <= 0.01 or freqlembook <= 0.01)):
@@ -249,6 +254,7 @@ if __name__ == '__main__':
     parser.add_argument('-c', '--char-regex', default='[a-zàéîôùç]')
     parser.add_argument('-M', '--max-letters', type=int, default=8)
     parser.add_argument('-m', '--min-letters', type=int, default=3)
+    parser.add_argument('--non-ascii-cost', type=int, default=0)
     parser.add_argument('--skip-cgrams', default='ONO')
     parser.add_argument('--max-lemme-variants', type=int, default=None)
     parser.add_argument('-X', '--include-bad-words', action='count', default=0)
@@ -277,7 +283,8 @@ if __name__ == '__main__':
                             max_letters=args.max_letters,
                             valid_chars=args.char_regex,
                             skip_lemmes=skip_lemmes, min_freq=0.1,
-                            skip_cgrams=skip_cgrams)
+                            skip_cgrams=skip_cgrams,
+                            non_ascii_cost=args.non_ascii_cost)
 
     data = clean_lemmes(data, max_lemme_variants=args.max_lemme_variants)
 
