@@ -213,7 +213,7 @@ if __name__ == '__main__':
     parser = argparse.ArgumentParser()
     parser.add_argument('LEXIQUE_FILE', type=argparse.FileType('r'))
 
-    parser.add_argument('-c', '--char-regex', default='[a-zàéîôù]')
+    parser.add_argument('-c', '--char-regex', default='[a-zàéîôùç]')
     parser.add_argument('-M', '--max-letters', type=int, default=8)
     parser.add_argument('-m', '--min-letters', type=int, default=3)
     parser.add_argument('-n', '--nb-dices', type=int, default=5)
