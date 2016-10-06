@@ -152,18 +152,40 @@ def clean_homophones(data):
         
     return new_data
 
-def clean_prefix(data, prefix_size):
+def select_typo_resistance(data, prefix_size=None, min_dist=None):
+    if min_dist:
+        try:
+            from Levenshtein import distance
+        except ImportError:
+            min_dist = None
+            print(
+                'Warning: Could not import Levenshtein (missing '
+                'python-levenshtein?), ignoring edit distance requirement',
+                file=sys.stderr)
+
     data.sort(key=operator.itemgetter('freq', 'freqlem'), reverse=True)
     known_pref = []
     new_data = []
-
     for word in data:
-        pref = word['mot'][:prefix_size]
-        if pref in known_pref:
-            continue
+        if prefix_size:
+            pref = word['mot'][:prefix_size]
+            if pref in known_pref:
+                continue
+
+        if min_dist:
+            is_ok = True
+            for w in new_data:
+                if distance(w['mot'], word['mot']) < min_dist:
+                    is_ok = False
+                    break
+
+            if not is_ok:
+                continue
+
+        if prefix_size:
+            known_pref.append(pref)
 
         new_data.append(word)
-        known_pref.append(pref)
 
     return new_data
     
@@ -220,7 +242,8 @@ if __name__ == '__main__':
     parser.add_argument('--skip-cgrams', default='ONO')
     parser.add_argument('--max-lemme-variants', type=int, default=None)
     parser.add_argument('-X', '--include-bad-words', action='count', default=0)
-    parser.add_argument('--unique-prefix', type=int)
+    parser.add_argument('-p', '--unique-prefix-size', type=int)
+    parser.add_argument('-l', '--edit-distance', type=int)
     parser.add_argument('--no-print-dices', action='store_true')
     parser.add_argument('-o', '--out', type=argparse.FileType('w'))
 
@@ -233,7 +256,6 @@ if __name__ == '__main__':
     print_dices = not args.no_print_dices
     skip_cgrams = args.skip_cgrams.split(',')
     max_lemme_variants = args.max_lemme_variants
-    prefix = args.unique_prefix
 
     if args.include_bad_words >= 2:
         skip_lemmes = []
@@ -248,8 +270,10 @@ if __name__ == '__main__':
                             skip_cgrams=skip_cgrams)
 
     data = clean_lemmes(data, max_lemme_variants=max_lemme_variants)
-    if prefix:
-        data = clean_prefix(data, prefix)
+
+    if args.unique_prefix_size or args.edit_distance:
+        data = select_typo_resistance(data, args.unique_prefix_size, args.edit_distance)
+
     data = clean_homophones(data)
 
     print_diceware_list(data, args.out, nb_dices=nb_dices, print_dices=print_dices)
