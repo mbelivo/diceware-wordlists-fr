@@ -29,8 +29,8 @@ Les types de liste sont:
 ### nonascii
 
 Contrairement aux listes standards qui contiennent uniquement des mots composés des lettres ascii
-([a-z]), les listes _nonascii ont des mots pouvant contenir également les lettres _àéîôùç_. Ces
-lettres ont été choisis pour leur relative facilité à être tapées sur un clavier français physique
+([a-z]), les listes _nonascii ont des mots pouvant contenir également les lettres *àéîôùç*. Ces
+lettres ont été choisies pour leur relative facilité à être tapées sur un clavier français physique
 ou virtuel (sur clavier android standard, toutes ces lettres sont accessible par un appui prolongé
 sur la lettre ascii correspondante, sans glissé).
 
