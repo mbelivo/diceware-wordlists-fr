@@ -19,6 +19,7 @@ pour tenter de générer une liste des mots les plus utilisés, en supprimant le
 Les paramètres utilisés pour générer ces listes sont visible dans le fichier [makefile](Makefile).
 
 Les types de liste sont:
+
 * __8k__: listes de 8192 mots pour utilisation purement logiciel
 * __4k__: listes de 4096 mots pour utilisation purement logiciel
 * __5d__: listes de 7776 mots pour diceware 5 dés, comparable à la liste large de l'eff
@@ -32,7 +33,11 @@ Contrairement aux listes standards qui contiennent uniquement des mots composés
 ([a-z]), les listes _nonascii ont des mots pouvant contenir également les lettres *àéîôùç*. Ces
 lettres ont été choisies pour leur relative facilité à être tapées sur un clavier français physique
 ou virtuel (sur clavier android standard, toutes ces lettres sont accessible par un appui prolongé
-sur la lettre ascii correspondante, sans glissé).
+sur la lettre ascii correspondante).
+
+Les listes _nonascii ont tendance à avoir une longueur de mot moyenne légèrement inférieure à leurs
+équivalent ascii, puisqu'elle ont été généré avec une taille de mot maximum inférieure. Elles
+peuvent donc être préférées quand on tire beaucoup de mots dans une liste.
 
 ### Statistiques
 
@@ -60,16 +65,26 @@ Un générateur de passphrase, [rolldice](src/rolldice), est disponible dans le 
 	$ src/rolldice wordlist_4k.txt
 	rendre ultime renifle loger rame
 
+Par défaut [rolldice](src/rolldice) tente de générer un mot de passe avec au moins 56 bits
+d'entropie avec la liste fournie, il tirera donc:
+
+* 5 mots dans une liste 4k, soit une entropie de 60 bits
+* 6 mots dans une liste 4d, soit une entropie de 62 bits
+* 5 mots dans une liste 5d, soit une entropie de 64.6 bits
+* 5 mots dans une liste 8k, soit une entropie de 65 bits
+
+Entropie? Il s'agit de la force du mot de passe, calculé en bit. Pour découvrir un mot de passe avec
+une entropie de _n_ bits par une attaque en force (en essayant toutes les combinaisons possibles),
+il faudra en moyenne 2^n / 2 essais.
+
+Il est toutefois possible de spécifier un nombre de mots à tirer par rolldice.
+
 ### combien de mots choisirs
 
 **Disclaimer**: je n'ai aucune formation ou réelle compétence en crypto ou en théorie de
 l'information. L'anssi
 [dit](https://www.ssi.gouv.fr/administration/precautions-elementaires/calculer-la-force-dun-mot-de-passe/)
 que en dessous de 80 bits d'entropie c'est de la daube.
-
-Entropie? Il s'agit de la force du mot de passe, calculé en bit. Pour découvrir un mot de passe avec
-une entropie de _n_ bits par une attaque en force (en essayant toutes les combinaisons possibles),
-il faudra en moyenne 2^n / 2 essais.
 
 Le site original de [diceware](diceware.com) et l'article de l'eff conseillent 6 mots depuis une
 liste _5d_ (77.5 bits) ou 8 mots depuis une liste _4d_ (82.7 bits). xkcd parle de 44 bits d'entropie
@@ -81,6 +96,8 @@ service »). Pour une attaque locale sur un hash faible comme md5 on atteint au 
 essais par seconde sur du matériel disponible à tous (voir ce
 [benchmark de hashcat](https://gist.github.com/epixoip/a83d38f412b4737e99bbef804a270c40) par
 exemple).
+
+#### Exemples de temps nécessaire pour brute forcer des mots de passe de différentes entropies
 
 vitesse \ entropie   | 48 (4 mots ∈ 4k) | 52 (4 mots ∈ 8k) | 60 (5 mots ∈ 4k) | 65 (5 mots ∈ 8k) | 72 (6 mots ∈ 4k) | 78 (6 mots ∈ 8k)
 ---------------------|------------------|------------------|------------------|------------------|------------------|-----------------
@@ -94,20 +111,14 @@ vitesse \ entropie   | 48 (4 mots ∈ 4k) | 52 (4 mots ∈ 8k) | 60 (5 mots ∈ 
 100 kH/s (bcrypt*)   |           44 ans |        7 siècles |        > 10k ans |              lol |              lol |              lol
 10 kH/s (veracrypt*) |        4 siècles |           7k ans |              lol |              lol |              lol |              lol
 
-Légende: «_lol_» de l'odre de plusieurs millions d'années, «_48 (4 mots ∈ 4k)_» 48 bits d'entropie,
-obtenu en tirant 4 mots d'un fichier de 4096 mots
+Vitesse en Hashs par seconde (1TH/s = 10^12 hashs par seconde), entropie en bits
+(«_48 (4 mots ∈ 4k)_» 48 bits d'entropie, obtenu en tirant 4 mots d'un fichier de 4096 mots),
+«_lol_» de l'odre de plusieurs millions d'années.
 
 \* exemples tiré du
 [benchmark de hashcat](https://gist.github.com/epixoip/a83d38f412b4737e99bbef804a270c40)
 
 Tout ça sous réserve que je ne me sois pas trompé dans mes calculs (cf. disclaimer)
-
-Par défaut [rolldice](src/rolldice) tente de générer au moins 56 bits d'entropie avec la liste
-fournie, il tirera donc:
-* 5 mots dans une liste 4k, soit 60 bits
-* 6 mots dans une liste 4d, soit 62 bits
-* 5 mots dans une liste 5d, soit 64.6 bits
-* 5 mots dans une liste 8k, soit 65 bits
 
 ## Licences
 Le code source est sous licence MIT
