@@ -13,22 +13,22 @@ wordlist_nodice_nonascii: wordlist_fr_8k_nonascii.txt
 all: wordlist wordlist_nonascii wordlist_nodice wordlist_nodice_nonascii
 
 wordlist_fr_8k.txt: $(LEXFILE)
-	$(GEN) -M9 --limit=8192 --no-print-dices --char-regex=[a-z] $^ -o $@ $(FLAGS)
+	$(GEN) -M9 -V15 --limit=8192 --no-print-dices --char-regex=[a-z] $^ -o $@ $(FLAGS)
 
 wordlist_fr_8k_nonascii.txt: $(LEXFILE)
-	$(GEN) --limit=8192 --max-lemme-variants=6 --no-print-dices $^ -o $@ $(FLAGS)
+	$(GEN) --limit=8192 --max-lemme-variants=12 --no-print-dices $^ -o $@ $(FLAGS)
 
 wordlist_fr_5d.txt: $(LEXFILE)
-	$(GEN) -M9 --char-regex=[a-z] $^ -o $@ $(FLAGS)
+	$(GEN) -M9 -V13 --char-regex=[a-z] $^ -o $@ $(FLAGS)
 
 wordlist_fr_5d_nonascii.txt: $(LEXFILE)
-	$(GEN) --max-lemme-variants=12 $^ -o $@ $(FLAGS)
+	$(GEN) --max-lemme-variants=11 $^ -o $@ $(FLAGS)
 
 wordlist_fr_4k.txt: $(LEXFILE)
-	$(GEN) -M7 --limit=4096 --no-print-dices --char-regex=[a-z] $^ -o $@ $(FLAGS)
+	$(GEN) -M7 -V15 --limit=4096 --no-print-dices --char-regex=[a-z] $^ -o $@ $(FLAGS)
 
 wordlist_fr_4d.txt: $(LEXFILE)
-	$(GEN) -n4 -M5 --char-regex=[a-z] $^ -o $@ $(FLAGS)
+	$(GEN) -n4 -M5 -V10 --char-regex=[a-z] $^ -o $@ $(FLAGS)
 
 wordlist_fr_4d_2.txt: $(LEXFILE)
 	$(GEN) -n4 -M10 -p3 -l3 --char-regex=[a-z] $^ -o $@ $(FLAGS)

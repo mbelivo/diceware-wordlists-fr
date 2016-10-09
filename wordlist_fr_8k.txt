@@ -94,6 +94,7 @@ acide
 acompte
 acquis
 acquise
+acquitter
 acrobate
 acte
 acteur
@@ -501,6 +502,7 @@ arrivions
 arrivons
 arrogance
 arrogant
+arrogante
 arrondir
 arrosage
 arrose
@@ -645,7 +647,6 @@ aura
 aurait
 aurez
 auriez
-aurions
 aurons
 aurore
 aussi
@@ -722,7 +723,6 @@ avril
 axe
 ayant
 ayez
-ayons
 azur
 babiole
 baby
@@ -817,6 +817,7 @@ barrait
 barreau
 barrer
 barricade
+baryton
 bas
 bascula
 bascule
@@ -1044,6 +1045,7 @@ bourgeois
 bourreau
 bourrer
 bourrique
+bourru
 bourse
 bouscule
 bousculer
@@ -1120,6 +1122,7 @@ british
 broc
 brochant
 broche
+brochet
 brochure
 broderie
 broncher
@@ -1354,6 +1357,7 @@ catch
 catin
 cauchemar
 causait
+causant
 cause
 causer
 caution
@@ -2022,6 +2026,7 @@ couterait
 couteux
 coutume
 couture
+couvait
 couve
 couvent
 couvercle
@@ -2270,7 +2275,6 @@ devrais
 devrez
 devriez
 devrions
-devront
 diable
 diagonale
 dialecte
@@ -2794,8 +2798,6 @@ estrade
 etc
 eunuque
 euphorie
-eurent
-eussent
 eut
 eux
 exact
@@ -2908,8 +2910,6 @@ faisable
 faisait
 faisant
 faisceau
-faisiez
-faisions
 faisons
 fait
 faites
@@ -2929,6 +2929,7 @@ fanatique
 fanfare
 fantaisie
 fantasme
+fantasque
 farce
 farceur
 farci
@@ -2941,8 +2942,6 @@ fascinant
 fascine
 fascisme
 fasciste
-fassiez
-fassions
 fat
 fatal
 fatidique
@@ -2961,6 +2960,7 @@ fausse
 faut
 faute
 fauteuil
+fautif
 fauve
 faveur
 favorable
@@ -2980,7 +2980,6 @@ fera
 ferai
 ferez
 feriez
-ferions
 ferma
 fermait
 fermant
@@ -2990,6 +2989,7 @@ fermer
 fermerai
 fermeture
 fermier
+fermons
 feront
 ferraille
 ferry
@@ -3361,6 +3361,7 @@ gardienne
 gardons
 gare
 garer
+garnement
 garnie
 garnison
 garrot
@@ -3486,6 +3487,7 @@ graffiti
 grain
 graine
 graisse
+graisseux
 grammaire
 gramme
 grand
@@ -3665,6 +3667,7 @@ hic
 hideuse
 hideux
 hier
+hilarant
 hilare
 hippie
 hippo
@@ -3741,6 +3744,7 @@ hymne
 hyper
 hypnose
 hypocrite
+iceberg
 ici
 idem
 identifie
@@ -3794,6 +3798,7 @@ immuable
 impact
 impasse
 impatient
+impec
 imper
 implant
 implique
@@ -3818,6 +3823,7 @@ imprimeur
 improvise
 imprudent
 impudeur
+impulsif
 impulsion
 impur
 inapte
@@ -3982,8 +3988,6 @@ iode
 ira
 irai
 irez
-iriez
-irions
 iris
 irlandais
 ironie
@@ -4404,6 +4408,7 @@ magner
 magnum
 magot
 maigre
+maigreur
 maigri
 maigrir
 mail
@@ -4738,6 +4743,7 @@ moindre
 moine
 moineau
 moins
+moisi
 moisir
 moisson
 moite
@@ -4873,6 +4879,7 @@ municipal
 munition
 mur
 muraille
+muri
 murir
 murmura
 murmurait
@@ -5820,7 +5827,6 @@ pourri
 pourriez
 pourrions
 pourrir
-pourront
 poursuit
 poursuite
 poursuivi
@@ -5836,10 +5842,8 @@ poussette
 poussin
 poutre
 pouvait
-pouvant
 pouvez
 pouviez
-pouvions
 pouvoir
 pouvons
 prairie
@@ -5857,7 +5861,6 @@ prends
 preneur
 prenez
 preniez
-prenions
 prennent
 prenons
 prescrire
@@ -6025,8 +6028,6 @@ puissance
 puissant
 puissante
 puisse
-puissiez
-puissions
 pull
 pulsion
 punaise
@@ -6810,6 +6811,7 @@ sanglante
 sanglier
 sanglot
 sanglote
+sangloter
 sangsue
 sanguin
 sanguine
@@ -6837,7 +6839,7 @@ saura
 saurait
 saurer
 sauriez
-sauront
+saurons
 saut
 sauta
 sautait
@@ -7385,6 +7387,7 @@ symphonie
 synagogue
 syndicat
 syndrome
+syphilis
 tabac
 tabasse
 tabasser
@@ -7504,6 +7507,7 @@ terne
 terrain
 terrasse
 terre
+terreau
 terrestre
 terreur
 terrible
@@ -7941,7 +7945,6 @@ vengerai
 veniez
 venimeux
 venin
-venions
 venir
 venons
 vent
@@ -7987,6 +7990,7 @@ veuf
 veuille
 veuillez
 veulent
+veuvage
 veuve
 veux
 vexe
@@ -8017,7 +8021,6 @@ vieillit
 viendra
 viendrai
 viendrez
-viendriez
 viendront
 viennent
 viens
@@ -8136,13 +8139,10 @@ voudrais
 voudras
 voudrez
 voudriez
-voudrions
-voudront
 voulais
 voulant
 voulez
 vouliez
-voulions
 vouloir
 voulons
 voulu
