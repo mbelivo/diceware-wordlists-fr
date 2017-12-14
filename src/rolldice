@@ -6,10 +6,12 @@ import random
 import re
 import sys
 
+
 def choose(words, nb):
     rng = random.SystemRandom()
 
     return [rng.choice(words) for i in range(nb)]
+
 
 def rolldice(wordfile, entropy, nb_words=None):
     is_diceware = bool(re.fullmatch('[1-6]+ [\w \'-]+', wordfile.readline().strip()))
@@ -30,7 +32,7 @@ def rolldice(wordfile, entropy, nb_words=None):
 
     if (entropy < 44):
         print('Warning: the requested entropy of {:2.1f} bits seems very low.'.format(entropy),
-                file=sys.stderr)
+              file=sys.stderr)
 
     while True:
         passphrase = ' '.join(choose(words, nb_words))
@@ -42,6 +44,7 @@ def rolldice(wordfile, entropy, nb_words=None):
 
     print(passphrase)
 
+
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument('wordfile', type=argparse.FileType('r'))
@@ -51,6 +54,7 @@ def main():
     args = parser.parse_args()
 
     rolldice(args.wordfile, args.entropy, args.nb_words)
+
 
 if __name__ == '__main__':
     main()

@@ -45,9 +45,14 @@ VULGAR_LEMMES = [
     'niquer',
 ]
 
+
+def warn(message):
+    print('Warning: {}'.format(message), file=sys.stderr)
+
+
 def load_lexi_file(file, min_letters=0, max_letters=100, valid_chars='.',
-                    skip_lemmes=[], skip_cgrams=[], min_freq=0.0,
-                    skip_low_lemmes=True, non_ascii_cost=0):
+                   skip_lemmes=[], skip_cgrams=[], min_freq=0.0,
+                   skip_low_lemmes=True, non_ascii_cost=0):
     data = []
     reader = csv.DictReader(file, delimiter='\t', quoting=csv.QUOTE_NONE)
 
@@ -74,7 +79,7 @@ def load_lexi_file(file, min_letters=0, max_letters=100, valid_chars='.',
             continue
 
         # Application sauvage de la réforme 1990 sur l'accent circonflexe
-        if not 'sub:imp' in infover and not 'ind:pas' in infover:
+        if 'sub:imp' not in infover and 'ind:pas' not in infover:
             word = word.translate(trtable)
             lemme = lemme.translate(trtable)
 
@@ -105,7 +110,7 @@ def load_lexi_file(file, min_letters=0, max_letters=100, valid_chars='.',
             'nbletters': nbletters,
             'phon': row['2_phon'],
         })
-        
+
     return data
 
 
@@ -116,24 +121,25 @@ def clean_lemmes(data, max_lemme_variants=None):
     new_data = []
 
     data.sort(key=operator.itemgetter('lemme', 'cgram'))
-    for lemme, words in itertools.groupby(data, key=operator.itemgetter('lemme', 'cgram')):
+
+    for _, words in itertools.groupby(data, key=operator.itemgetter('lemme', 'cgram')):
         words = list(words)
 
         new_words = []
         words.sort(key=operator.itemgetter('phon'))
-        for phon, homophones in itertools.groupby(words, key=operator.itemgetter('phon')):
+        for _, homophones in itertools.groupby(words, key=operator.itemgetter('phon')):
             homophones = list(homophones)
             homophones.sort(key=lambda x: (x['freq'], -x['nbletters']), reverse=True)
             selected = homophones.pop(0)
-            
+
             # prefer canonic form
             canonic = next((x for x in homophones if x['mot'] == selected['lemme']), None)
             if canonic:
                 canonic['freq'] = selected['freq']
                 selected = canonic
-                
+
             new_words.append(selected)
-        
+
         new_words.sort(key=operator.itemgetter('freq'), reverse=True)
         new_data.extend(new_words[:max_lemme_variants])
 
@@ -172,8 +178,10 @@ def select_words(data, max_letters, decodable=False, limit=None):
         known_graph.append(word['mot'])
 
         if decodable:
-            forbidden.extend([word['mot'] + w for w in known_graph if len(word['mot'] + w) <= max_letters])
-            forbidden.extend([w + word['mot'] for w in known_graph if len(w + word['mot']) <= max_letters])
+            forbidden.extend([word['mot'] + w for w in known_graph
+                              if len(word['mot'] + w) <= max_letters])
+            forbidden.extend([w + word['mot'] for w in known_graph
+                              if len(w + word['mot']) <= max_letters])
 
     return new_data
 
@@ -204,10 +212,8 @@ def select_typo_resistance(data, prefix_size=None, min_dist=None):
             from Levenshtein import distance
         except ImportError:
             min_dist = None
-            print(
-                'Warning: Could not import Levenshtein (missing '
-                'python-levenshtein?), ignoring edit distance requirement',
-                file=sys.stderr)
+            warn('Could not import Levenshtein (missing python-levenshtein?),'
+                 ' ignoring edit distance requirement')
 
     data.sort(key=operator.itemgetter('freq', 'freqlem'), reverse=True)
     known_pref = []
@@ -239,7 +245,7 @@ def select_typo_resistance(data, prefix_size=None, min_dist=None):
 def print_diceware_list(words, outfile, limit=None, nb_dices=None, nb_sides=6, print_dices=True):
     if limit:
         if len(words) < limit:
-            print('Warning: not enough words', file=sys.stderr)
+            warn('not enough words')
 
         words.sort(key=operator.itemgetter('freq', 'freqlem'), reverse=True)
         words = words[:limit]
@@ -253,10 +259,11 @@ def print_diceware_list(words, outfile, limit=None, nb_dices=None, nb_sides=6, p
 
     try:
         locale.setlocale(locale.LC_COLLATE, 'fr_FR.UTF-8')
-    except Exception as e:
-        print('Warning: failed to set LC_COLLATE to fr_FR.UTF-8, sorting with default locale', file=sys.stderr)
+    except locale.Error:
+        warn('failed to set LC_COLLATE to fr_FR.UTF-8, sorting with default locale')
+
     words.sort(key=lambda word: locale.strxfrm(word['mot']))
-    
+
     len_total = 0
     count_nonascii = 0
     for word in words:
@@ -280,10 +287,10 @@ def print_diceware_list(words, outfile, limit=None, nb_dices=None, nb_sides=6, p
     efficiency = round(math.log(nb_words, 2) / avg_len, 1)
 
     print('{} words ({} non ascii), avg len: {} char., efficiency: ~{} bits / char'.format(
-            nb_words, count_nonascii, round(avg_len, 2), efficiency), file=sys.stderr)
+        nb_words, count_nonascii, round(avg_len, 2), efficiency), file=sys.stderr)
 
 
-if __name__ == '__main__':
+def main():
     parser = argparse.ArgumentParser()
     parser.add_argument('LEXIQUE_FILE', type=argparse.FileType('r'))
 
@@ -313,7 +320,7 @@ if __name__ == '__main__':
 
     nb_dices = args.nb_dices
     limit = nb_dice_sides**nb_dices
-    if not args.limit is None:
+    if args.limit is not None:
         nb_dices = None
         limit = args.limit
 
@@ -325,11 +332,11 @@ if __name__ == '__main__':
         skip_lemmes = VULGAR_LEMMES + INSULT_LEMMES
 
     data = load_lexi_file(args.LEXIQUE_FILE, min_letters=args.min_letters,
-                            max_letters=args.max_letters,
-                            valid_chars=args.char_regex,
-                            skip_lemmes=skip_lemmes, min_freq=0.1,
-                            skip_cgrams=skip_cgrams,
-                            non_ascii_cost=args.non_ascii_cost)
+                          max_letters=args.max_letters,
+                          valid_chars=args.char_regex,
+                          skip_lemmes=skip_lemmes, min_freq=0.1,
+                          skip_cgrams=skip_cgrams,
+                          non_ascii_cost=args.non_ascii_cost)
 
     data = clean_lemmes(data, max_lemme_variants=args.max_lemme_variants)
 
@@ -340,3 +347,7 @@ if __name__ == '__main__':
 
     print_diceware_list(data, args.out, limit=limit, nb_dices=nb_dices,
                         nb_sides=nb_dice_sides, print_dices=print_dices)
+
+
+if __name__ == '__main__':
+    main()
