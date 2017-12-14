@@ -140,23 +140,63 @@ def clean_lemmes(data, max_lemme_variants=None):
     return new_data
 
 
-def clean_homophones(data):
+def select_words(data, max_letters, decodable=False, limit=None):
+    """On selectionne les mots les plus frequent en supprimant les
+    homophones, les homographes, et eventuellement les mots pouvant
+    former des combinaisons"""
+
     data.sort(key=operator.itemgetter('freq', 'freqlem'), reverse=True)
     known_phon = []
     known_graph = []
     new_data = []
+    forbidden = []
+    count = 0
 
     for word in data:
         if word['phon'] in known_phon:
             continue
         if word['mot'] in known_graph:
             continue
+        if word['mot'] in forbidden:
+            continue
+        if decodable and exists_as_combinaison(word['mot'], known_graph):
+            continue
 
         new_data.append(word)
+
+        count = count + 1
+        if limit and count >= limit:
+            break
+
         known_phon.append(word['phon'])
         known_graph.append(word['mot'])
-        
+
+        if decodable:
+            forbidden.extend([word['mot'] + w for w in known_graph if len(word['mot'] + w) <= max_letters])
+            forbidden.extend([w + word['mot'] for w in known_graph if len(w + word['mot']) <= max_letters])
+
     return new_data
+
+
+def exists_as_combinaison(word, wordlist):
+    if len(wordlist) == 0:
+        return False
+
+    wordlen = len(word)
+    wordlist = sorted(wordlist, key=len)
+    minlen = len(wordlist[0])
+    maxlen = len(wordlist[-1])
+    max_candidate_len = maxlen - wordlen
+
+    if minlen > max_candidate_len:
+        return False
+
+    for w in (w for w in wordlist + [word] if len(w) <= max_candidate_len):
+        if word + w in wordlist or w + word in wordlist:
+            return True
+
+    return False
+
 
 def select_typo_resistance(data, prefix_size=None, min_dist=None):
     if min_dist:
@@ -194,14 +234,13 @@ def select_typo_resistance(data, prefix_size=None, min_dist=None):
         new_data.append(word)
 
     return new_data
-    
+
+
 def print_diceware_list(words, outfile, limit=None, nb_dices=None, nb_sides=6, print_dices=True):
-    if nb_dices:
-        limit = nb_sides**nb_dices
+    if limit:
         if len(words) < limit:
             print('Warning: not enough words', file=sys.stderr)
 
-    if limit:
         words.sort(key=operator.itemgetter('freq', 'freqlem'), reverse=True)
         words = words[:limit]
 
@@ -261,17 +300,22 @@ if __name__ == '__main__':
     parser.add_argument('-X', '--include-bad-words', action='count', default=0)
     parser.add_argument('-p', '--unique-prefix-size', type=int)
     parser.add_argument('-l', '--edit-distance', type=int)
+    parser.add_argument('-d', '--decodable', action='store_true')
     parser.add_argument('--no-print-dices', action='store_true')
     parser.add_argument('-o', '--out', type=argparse.FileType('w'))
 
     args = parser.parse_args()
 
+    nb_dice_sides = 6
+
     print_dices = not args.no_print_dices
     skip_cgrams = args.skip_cgrams.split(',')
 
     nb_dices = args.nb_dices
+    limit = nb_dice_sides**nb_dices
     if not args.limit is None:
         nb_dices = None
+        limit = args.limit
 
     if args.include_bad_words >= 2:
         skip_lemmes = []
@@ -292,7 +336,7 @@ if __name__ == '__main__':
     if args.unique_prefix_size or args.edit_distance:
         data = select_typo_resistance(data, args.unique_prefix_size, args.edit_distance)
 
-    data = clean_homophones(data)
+    data = select_words(data, args.max_letters, args.decodable, limit)
 
-    print_diceware_list(data, args.out, limit=args.limit, nb_dices=nb_dices,
-                        print_dices=print_dices)
+    print_diceware_list(data, args.out, limit=limit, nb_dices=nb_dices,
+                        nb_sides=nb_dice_sides, print_dices=print_dices)
