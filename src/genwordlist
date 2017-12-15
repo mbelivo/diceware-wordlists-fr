@@ -10,6 +10,7 @@ import re
 import sys
 
 INSULT_LEMMES = [
+    'bamboula',
     'bicot',
     'boche',
     'con',
@@ -26,9 +27,12 @@ INSULT_LEMMES = [
     'salaud',
     'salopard',
     'salope',
+    'trouduc',
     'youpin',
 ]
 VULGAR_LEMMES = [
+    'baise',
+    'baiser',
     'baiseur',
     'bite',
     'burne',
@@ -43,6 +47,7 @@ VULGAR_LEMMES = [
     'merder',
     'merdeux',
     'niquer',
+    'sodomie',
 ]
 
 
