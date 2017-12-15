@@ -20,7 +20,6 @@ Les paramètres utilisés pour générer ces listes sont visible dans le fichier
 
 Les types de liste sont:
 
-* __8k__: listes de 8192 mots pour utilisation purement logiciel
 * __4k__: listes de 4096 mots pour utilisation purement logiciel
 * __5d__: listes de 7776 mots pour diceware 5 dés, comparable à la liste large de l'eff
 * __4d__: listes de 1296 mots pour diceware 4 dés, comparable à la liste short_1 de l'eff
@@ -43,8 +42,6 @@ peuvent donc être préférées quand on tire beaucoup de mots dans une liste.
 
 fichier                   | mots | non ascii | avg len | bit/mot | bit/car
 --------------------------|------|-----------|---------|---------|--------
-wordlist_fr_8k            | 8192 |         0 |    6.75 |    13.0 |     1.9
-wordlist_fr_8k_nonascii   | 8192 |       996 |    6.33 |    13.0 |     2.1
 wordlist_fr_5d            | 7776 |         0 |    6.72 |    12.9 |     1.9
 wordlist_fr_5d_nonascii   | 7776 |       953 |    6.31 |    12.9 |     2.0
 wordlist_fr_4k            | 4096 |         0 |    5.76 |    12.0 |     2.1
@@ -72,7 +69,6 @@ d'entropie avec la liste fournie, il tirera donc:
 * 5 mots dans une liste 4k, soit une entropie de 60 bits
 * 6 mots dans une liste 4d, soit une entropie de 62 bits
 * 5 mots dans une liste 5d, soit une entropie de 64.6 bits
-* 5 mots dans une liste 8k, soit une entropie de 65 bits
 
 Entropie? Il s'agit de la force du mot de passe, calculé en bit. Pour découvrir un mot de passe avec
 une entropie de _n_ bits par une attaque en force (en essayant toutes les combinaisons possibles),
