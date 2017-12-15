@@ -6,7 +6,8 @@ wordlist: wordlist_fr_5d.txt wordlist_fr_4k.txt wordlist_fr_4d.txt wordlist_fr_4
 
 wordlist_nonascii: wordlist_fr_5d_nonascii.txt wordlist_fr_4k_nonascii.txt
 
-wordlist_extra: extra/wordlist_fr_8k.txt extra/wordlist_fr_8k_nonascii.txt extra/wordlist_fr_4d_2_nonascii.txt
+wordlist_extra: extra/wordlist_fr_8k.txt extra/wordlist_fr_8k_nonascii.txt \
+	extra/wordlist_fr_4d_nonascii.txt extra/wordlist_fr_4d_2_nonascii.txt
 
 all: wordlist wordlist_nonascii wordlist_extra
 
@@ -33,6 +34,9 @@ extra/wordlist_fr_8k.txt: $(LEXFILE)
 
 extra/wordlist_fr_8k_nonascii.txt: $(LEXFILE)
 	$(GEN) --limit=8192 --no-print-dices -V7 -d $^ -o $@ $(FLAGS)
+
+extra/wordlist_fr_4d_nonascii.txt: $(LEXFILE)
+	$(GEN) -n4 -m2 -M5 -V4 -d $^ -o $@ $(FLAGS)
 
 extra/wordlist_fr_4d_2_nonascii.txt: $(LEXFILE)
 	$(GEN) -n4 -M9 -p3 -l3 -d $^ -o $@ $(FLAGS)
