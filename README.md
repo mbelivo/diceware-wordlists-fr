@@ -35,7 +35,7 @@ ou virtuel (sur clavier android standard, toutes ces lettres sont accessible par
 sur la lettre ascii correspondante).
 
 Les listes _nonascii ont tendance à avoir une longueur de mot moyenne légèrement inférieure à leurs
-équivalent ascii, puisqu'elle ont été généré avec une taille de mot maximum inférieure. Elles
+équivalent ascii, puisqu'elles ont été générées avec une taille de mot maximum inférieure. Elles
 peuvent donc être préférées quand on tire beaucoup de mots dans une liste.
 
 ### Statistiques
