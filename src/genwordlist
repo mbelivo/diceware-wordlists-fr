@@ -16,6 +16,7 @@ INSULT_LEMMES = [
     'con',
     'connard',
     'connasse',
+    'ducon',
     'enculé',
     'fifi',
     'fritz',
@@ -57,11 +58,16 @@ def warn(message):
 
 def load_lexi_file(file, min_letters=0, max_letters=100, valid_chars='.',
                    skip_lemmes=[], skip_cgrams=[], min_freq=0.0,
-                   skip_low_lemmes=True, non_ascii_cost=0):
+                   skip_low_lemmes=True, non_ascii_cost=0, exclude_file=None):
     data = []
     reader = csv.DictReader(file, delimiter='\t', quoting=csv.QUOTE_NONE)
 
     trtable = str.maketrans('îû', 'iu')
+
+    exclude = []
+
+    if exclude_file:
+        exclude = [word.strip() for word in exclude_file]
 
     for row in reader:
         word = row['1_ortho']
@@ -87,6 +93,9 @@ def load_lexi_file(file, min_letters=0, max_letters=100, valid_chars='.',
         if 'sub:imp' not in infover and 'ind:pas' not in infover:
             word = word.translate(trtable)
             lemme = lemme.translate(trtable)
+
+        if word in exclude:
+            continue
 
         if re.fullmatch(valid_chars + '+', word) is None:
             continue
@@ -315,6 +324,7 @@ def main():
     parser.add_argument('-d', '--decodable', action='store_true')
     parser.add_argument('--no-print-dices', action='store_true')
     parser.add_argument('-o', '--out', type=argparse.FileType('w'))
+    parser.add_argument('-x', '--exclude-file', type=argparse.FileType('r'))
 
     args = parser.parse_args()
 
@@ -341,7 +351,8 @@ def main():
                           valid_chars=args.char_regex,
                           skip_lemmes=skip_lemmes, min_freq=0.1,
                           skip_cgrams=skip_cgrams,
-                          non_ascii_cost=args.non_ascii_cost)
+                          non_ascii_cost=args.non_ascii_cost,
+                          exclude_file=args.exclude_file)
 
     data = clean_lemmes(data, max_lemme_variants=args.max_lemme_variants)
 
