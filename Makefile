@@ -1,45 +1,38 @@
-GEN=src/genwordlist
-LEXFILE=lexique/Lexique381.txt
-FLAGS=
+GEN=$(CURDIR)/src/genwordlist
+LEXFILE=$(CURDIR)/lexique/Lexique381.txt
+NONASCII_FLAGS=--char-regex=[a-zàéîôùç]
+NODICE_FLAGS=--no-print-dices
+FLAGS=-d
 
-wordlist: wordlist_fr_5d.txt wordlist_fr_4k.txt wordlist_fr_4d.txt wordlist_fr_4d_2.txt
+.PHONY: wordlists extras all clean_all
 
-wordlist_nonascii: wordlist_fr_5d_nonascii.txt wordlist_fr_4k_nonascii.txt
+export
 
-wordlist_extra: extra/wordlist_fr_8k.txt extra/wordlist_fr_8k_nonascii.txt \
-	extra/wordlist_fr_4d_nonascii.txt extra/wordlist_fr_4d_2_nonascii.txt
+wordlists: wordlist_fr_5d.txt wordlist_fr_4k.txt wordlist_fr_4d.txt wordlist_fr_4d_2.txt \
+	wordlist_fr_5d_nonascii.txt wordlist_fr_4k_nonascii.txt
 
-all: wordlist wordlist_nonascii wordlist_extra
+extras:
+	$(MAKE) -C extra
+
+all: wordlists extras
 
 wordlist_fr_5d.txt: $(LEXFILE)
-	$(GEN) -n5 -M9 --char-regex=[a-z] -V6 -d $^ -o $@ $(FLAGS)
+	$(GEN) -n5 -M9 -V6 $< -o $@ $(FLAGS)
 
 wordlist_fr_5d_nonascii.txt: $(LEXFILE)
-	$(GEN) -n5 -V6 -d $^ -o $@ $(FLAGS)
+	$(GEN) -n5 -V6 $< -o $@ $(FLAGS) $(NONASCII_FLAGS)
 
 wordlist_fr_4k.txt: $(LEXFILE)
-	$(GEN) --limit=4096 --no-print-dices -M7 --char-regex=[a-z] -V5 -d $^ -o $@ $(FLAGS)
+	$(GEN) --limit=4096 -M7 -V5 $< -o $@ $(FLAGS) $(NODICE_FLAGS)
 
 wordlist_fr_4k_nonascii.txt: $(LEXFILE)
-	$(GEN) --limit=4096 --no-print-dices -M6 -V5 -d $^ -o $@ $(FLAGS)
+	$(GEN) --limit=4096 -M6 -V5 $< -o $@ $(FLAGS) $(NONASCII_FLAGS) $(NODICE_FLAGS)
 
 wordlist_fr_4d.txt: $(LEXFILE)
-	$(GEN) -n4 -M5 --char-regex=[a-z] -V4 -d $^ -o $@ $(FLAGS)
+	$(GEN) -n4 -M5 -V4 $< -o $@ $(FLAGS)
 
 wordlist_fr_4d_2.txt: $(LEXFILE)
-	$(GEN) -n4 -M10 -p3 -l3 --char-regex=[a-z] -d $^ -o $@ $(FLAGS)
+	$(GEN) -n4 -M10 -p3 -l3 $< -o $@ $(FLAGS)
 
-extra/wordlist_fr_8k.txt: $(LEXFILE)
-	$(GEN) --limit=8192 --no-print-dices -M9 --char-regex=[a-z] -V7 -d $^ -o $@ $(FLAGS)
-
-extra/wordlist_fr_8k_nonascii.txt: $(LEXFILE)
-	$(GEN) --limit=8192 --no-print-dices -V7 -d $^ -o $@ $(FLAGS)
-
-extra/wordlist_fr_4d_nonascii.txt: $(LEXFILE)
-	$(GEN) -n4 -m2 -M5 -V4 -d $^ -o $@ $(FLAGS)
-
-extra/wordlist_fr_4d_2_nonascii.txt: $(LEXFILE)
-	$(GEN) -n4 -M9 -p3 -l3 -d $^ -o $@ $(FLAGS)
-
-clean:
+clean_all:
 	rm wordlist*.txt extra/wordlist*.txt
