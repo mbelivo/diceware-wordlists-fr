@@ -65,7 +65,6 @@ afflux
 affole
 affres
 affut
-aga
 agace
 agacer
 age
@@ -84,6 +83,7 @@ agneau
 agonie
 ahuri
 aidait
+aidant
 aide
 aider
 aidera
@@ -98,6 +98,7 @@ aimait
 aimant
 aime
 aimer
+aimera
 aimez
 aimons
 ainé
@@ -116,6 +117,7 @@ algue
 alias
 alibi
 aligne
+allait
 allant
 aller
 allié
@@ -148,7 +150,6 @@ ample
 amusa
 amuse
 amuser
-ana
 anal
 ananas
 ancien
@@ -235,6 +236,7 @@ aube
 aucun
 aucune
 audace
+auge
 augure
 auquel
 aura
@@ -283,7 +285,6 @@ avril
 axe
 azur
 baba
-baby
 bac
 bachot
 bacon
@@ -342,6 +343,7 @@ bateau
 batte
 battez
 battit
+battra
 battre
 battu
 baume
@@ -422,6 +424,7 @@ blocus
 blond
 blonde
 blot
+blotti
 blouse
 bluff
 boa
@@ -437,6 +440,7 @@ bois
 boite
 bol
 bombe
+bombé
 bon
 bondé
 bondir
@@ -481,6 +485,7 @@ boulet
 boulon
 boulot
 boum
+bourde
 bourg
 bourru
 bourse
@@ -490,7 +495,6 @@ bouton
 boxe
 boxer
 boxeur
-boy
 boyard
 boyau
 braise
@@ -501,7 +505,6 @@ bras
 brave
 braver
 bravo
-break
 brebis
 bref
 brelan
@@ -558,6 +561,7 @@ buvait
 buvard
 buveur
 buvez
+buvons
 cabane
 cabas
 cabine
@@ -716,6 +720,7 @@ chili
 chimie
 china
 chiot
+chiper
 chips
 choc
 choir
@@ -828,6 +833,7 @@ compte
 comté
 conclu
 conçu
+condé
 condor
 cône
 confia
@@ -979,7 +985,6 @@ datant
 datcha
 date
 dater
-deal
 dealer
 débat
 débit
@@ -1029,6 +1034,7 @@ devis
 devise
 devoir
 devons
+devra
 diable
 dicte
 dicter
@@ -1054,6 +1060,7 @@ dirige
 disait
 disant
 disco
+disent
 dispos
 disque
 dit
@@ -1119,7 +1126,6 @@ dry
 duc
 ducat
 duce
-ducon
 due
 duel
 dument
@@ -1130,6 +1136,7 @@ duper
 duquel
 dur
 dura
+durait
 durant
 durcir
 durcit
@@ -1356,6 +1363,7 @@ fend
 fendre
 fendu
 fente
+fera
 ferma
 fermai
 ferme
@@ -1429,6 +1437,7 @@ fleuve
 flic
 flippe
 flirt
+flore
 flot
 flotte
 flou
@@ -1546,6 +1555,7 @@ futur
 fuyait
 fuyant
 fuyez
+fuyons
 gadget
 gadoue
 gaffe
@@ -1623,7 +1633,6 @@ gilet
 gilles
 gin
 girafe
-girl
 giron
 gisait
 gitan
@@ -1655,7 +1664,6 @@ gober
 godet
 gogo
 gogues
-gold
 golden
 golf
 gombo
@@ -1754,7 +1762,7 @@ hanche
 hangar
 hante
 hanter
-hard
+harde
 hardi
 harem
 hareng
@@ -1766,7 +1774,6 @@ hasard
 haussa
 hausse
 haute
-have
 havre
 herbe
 hernie
@@ -1780,7 +1787,6 @@ hideux
 hier
 hilare
 hippie
-hippo
 hisse
 hisser
 hit
@@ -1791,7 +1797,6 @@ hoche
 hocher
 hockey
 homard
-home
 homme
 homo
 honore
@@ -1859,6 +1864,7 @@ index
 indic
 indice
 indien
+inepte
 inerte
 infant
 infect
@@ -1880,7 +1886,6 @@ iode
 iris
 ironie
 irrite
-isba
 islam
 isole
 isoler
@@ -1892,7 +1897,6 @@ jacte
 jacter
 jade
 jadis
-jaffas
 jailli
 jais
 jaloux
@@ -1944,6 +1948,7 @@ jouez
 joui
 jouir
 joujou
+jouons
 jour
 joute
 jovial
@@ -1983,7 +1988,6 @@ kaki
 karma
 képi
 keuf
-kid
 kif
 kilo
 kimono
@@ -1995,7 +1999,6 @@ labo
 labour
 lac
 lacet
-lady
 lagune
 laide
 laine
@@ -2045,7 +2048,6 @@ laveur
 lavoir
 leader
 leçon
-ledit
 légal
 léger
 legs
@@ -2055,7 +2057,6 @@ lequel
 les
 lester
 lettre
-leu
 leurs
 leva
 levait
@@ -2074,7 +2075,6 @@ lier
 lierre
 liesse
 lieu
-light
 ligne
 ligue
 lilas
@@ -2154,6 +2154,7 @@ lundi
 lune
 lupus
 lustre
+lut
 lutin
 lutte
 lutter
@@ -2189,6 +2190,7 @@ majeur
 major
 mal
 malade
+malaga
 malice
 malin
 maman
@@ -2283,6 +2285,7 @@ mesure
 métal
 métis
 métro
+mette
 mettez
 mettre
 meuble
@@ -2331,13 +2334,11 @@ mise
 miser
 miss
 missel
-mister
 mitan
 mitard
 miteux
 mitron
 mixte
-mlle
 mobile
 moche
 mode
@@ -2400,6 +2401,7 @@ moult
 mourir
 mouron
 mourra
+mourut
 mousse
 moyen
 muet
@@ -2418,7 +2420,6 @@ muscle
 muse
 museau
 musée
-must
 mutant
 muter
 mutuel
@@ -2461,7 +2462,6 @@ neuf
 neutre
 neuve
 neveu
-new
 nez
 niais
 nice
@@ -2518,7 +2518,6 @@ nuire
 nuit
 nulle
 nuque
-nurse
 nylon
 nymphe
 oasis
@@ -2591,6 +2590,7 @@ osait
 osant
 ose
 oser
+oserai
 osier
 osseux
 ôta
@@ -2605,7 +2605,6 @@ oui
 ourlet
 ours
 ourson
-out
 outil
 outre
 ouvert
@@ -2621,7 +2620,6 @@ ozone
 pacha
 pack
 pacte
-paddy
 paella
 paf
 page
@@ -2644,7 +2642,6 @@ panne
 pantin
 papa
 pape
-papet
 papier
 papy
 paquet
@@ -2686,6 +2683,7 @@ passer
 passif
 pastis
 patate
+pater
 patin
 patine
 patio
@@ -2701,6 +2699,7 @@ payait
 payant
 paye
 payer
+payes
 pays
 paysan
 peau
@@ -2721,7 +2720,6 @@ pendra
 pendre
 pendu
 pénis
-penny
 pensa
 pensai
 pense
@@ -2737,6 +2735,7 @@ perche
 perçu
 perde
 perdez
+perdit
 perdre
 perds
 perdu
@@ -2843,7 +2842,6 @@ plasma
 plat
 plate
 plaza
-please
 plein
 pleine
 pleura
@@ -2911,6 +2909,7 @@ posait
 posant
 pose
 poser
+posera
 postal
 poste
 poster
@@ -2948,6 +2947,7 @@ preuve
 prévu
 pria
 priait
+priant
 prier
 prieur
 prime
@@ -2990,7 +2990,6 @@ publie
 puce
 puceau
 pudeur
-pue
 puer
 puis
 puise
@@ -2998,6 +2997,7 @@ puiser
 puisse
 pull
 pulpe
+puma
 punch
 puni
 punir
@@ -3008,6 +3008,7 @@ purée
 purge
 purger
 purin
+put
 putois
 putsch
 puzzle
@@ -3154,6 +3155,7 @@ renard
 rend
 rendez
 rendit
+rendra
 rendre
 rendu
 rené
@@ -3224,6 +3226,7 @@ rince
 rincer
 ring
 rink
+rira
 rire
 risée
 risqua
@@ -3252,7 +3255,6 @@ rogne
 rogue
 roi
 rôle
-roll
 romain
 roman
 rompez
@@ -3307,13 +3309,13 @@ ruse
 rusé
 russe
 rustre
-rut
 rythme
 sabbat
 sable
 sabot
 sabre
 sac
+sache
 sachet
 sacré
 safari
@@ -3329,6 +3331,7 @@ saison
 saké
 salade
 salami
+salas
 salé
 sali
 salir
@@ -3384,7 +3387,6 @@ scotch
 scout
 scribe
 script
-scrubs
 scrute
 sec
 second
@@ -3418,6 +3420,7 @@ serré
 serrer
 sert
 sérum
+serve
 servez
 servi
 servir
@@ -3429,8 +3432,6 @@ sévit
 sexe
 sexuel
 sexy
-sherry
-shit
 shoote
 short
 sida
@@ -3446,7 +3447,6 @@ signa
 signal
 signe
 signer
-signor
 silex
 sillon
 simple
@@ -3466,6 +3466,7 @@ sketch
 ski
 skier
 skip
+slave
 slip
 slogan
 snack
@@ -3490,7 +3491,7 @@ solex
 solide
 solo
 sombre
-somme
+sommes
 sommet
 son
 sonar
@@ -3535,10 +3536,8 @@ soviet
 soyeux
 spasme
 speech
-speed
 sperme
 sphinx
-spider
 sport
 spot
 spray
@@ -3562,7 +3561,6 @@ stress
 strict
 stries
 string
-strip
 studio
 stups
 style
@@ -3586,6 +3584,7 @@ suif
 suis
 suisse
 suite
+suive
 suivez
 suivi
 suivra
@@ -3610,7 +3609,6 @@ syrien
 tabac
 table
 tabou
-tac
 tache
 tacher
 tacite
@@ -3619,6 +3617,7 @@ tact
 taffe
 taille
 tais
+taise
 taisez
 talc
 talent
@@ -3660,7 +3659,6 @@ taupe
 taxe
 taxer
 taxi
-team
 teigne
 teint
 teinte
@@ -3715,7 +3713,6 @@ tigre
 tilt
 timbre
 timide
-timing
 tinter
 tira
 tirade
@@ -3726,6 +3723,7 @@ tire
 tirer
 tireur
 tiroir
+tirons
 tisane
 tisser
 tissu
@@ -3836,6 +3834,7 @@ truie
 truite
 trust
 tsar
+tuait
 tuba
 tube
 tue
@@ -3916,12 +3915,14 @@ vase
 vassal
 vaste
 vaudou
+vaudra
 vécu
 veille
 veine
 vélo
 velu
 venait
+vende
 vendez
 vendra
 vendre
@@ -4018,6 +4019,7 @@ vivace
 vivait
 vivant
 vivent
+vivez
 vivre
 vizir
 vocal
@@ -4033,6 +4035,7 @@ voirie
 vois
 voisin
 vol
+vola
 volant
 volcan
 voler
@@ -4059,6 +4062,7 @@ vous
 voute
 vouté
 voyage
+voyait
 voyant
 voyeur
 voyez
@@ -4074,15 +4078,11 @@ watts
 whisky
 yacht
 yack
-yang
 yankee
 yaourt
-yard
 yen
 yeux
-yin
 yoga
-zanzi
 zélé
 zen
 zéro

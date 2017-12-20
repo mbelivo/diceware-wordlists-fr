@@ -37,6 +37,7 @@ accro
 accueil
 accuse
 accuser
+acharne
 achat
 acheta
 acheter
@@ -62,6 +63,7 @@ admirer
 admis
 ado
 adopter
+adoptif
 adorait
 adore
 adorer
@@ -78,7 +80,6 @@ affole
 affreux
 affront
 affut
-aga
 agace
 agence
 agenda
@@ -139,6 +140,7 @@ amante
 amas
 amateur
 ambigu
+ambre
 amen
 amena
 amenait
@@ -150,6 +152,7 @@ amical
 amigo
 amiral
 amont
+amorce
 amour
 ample
 ampleur
@@ -158,7 +161,6 @@ amusait
 amusant
 amuse
 amuser
-ana
 analyse
 ananas
 ancien
@@ -197,6 +199,7 @@ apprise
 appuie
 appuya
 appuyer
+apte
 arabe
 arbitre
 arbre
@@ -324,7 +327,6 @@ avouez
 avril
 axe
 azur
-baby
 bac
 bacon
 badaud
@@ -399,13 +401,13 @@ baver
 bazar
 beau
 bec
-because
 beige
 belge
 belle
 ben
 bercail
 berceau
+bercer
 berge
 berger
 besogne
@@ -511,10 +513,10 @@ bouton
 boxe
 boxer
 boxeur
-boy
 boyau
 braise
 branche
+brandy
 branle
 branler
 braquer
@@ -522,7 +524,6 @@ bras
 brasier
 brave
 bravo
-break
 brebis
 bref
 brevet
@@ -550,6 +551,7 @@ brule
 bruler
 brulure
 brume
+brumeux
 brun
 brune
 brusque
@@ -607,6 +609,7 @@ calife
 calmant
 calme
 calmer
+calmera
 came
 camion
 camper
@@ -643,6 +646,7 @@ carnet
 carotte
 carpe
 carreau
+carrure
 carte
 cas
 casbah
@@ -844,6 +848,7 @@ coller
 collier
 colline
 colombe
+colon
 colonel
 colonie
 colonne
@@ -900,9 +905,11 @@ contrat
 contre
 convenu
 convoi
+cookie
 cookies
 cool
 copain
+copeau
 copie
 copier
 copine
@@ -964,6 +971,7 @@ coute
 couteau
 couter
 coutera
+couteux
 coutume
 couture
 couvent
@@ -994,6 +1002,7 @@ cri
 cria
 criait
 criant
+cricket
 crier
 crime
 crise
@@ -1016,6 +1025,7 @@ croyant
 croyez
 cru
 cruche
+crucial
 cruel
 crypte
 cube
@@ -1052,7 +1062,6 @@ danser
 danseur
 dansons
 date
-deal
 dealer
 debout
 dedans
@@ -1189,7 +1198,6 @@ droit
 droite
 duc
 duce
-ducon
 duel
 dune
 duo
@@ -1443,6 +1451,7 @@ finira
 finirai
 finisse
 firme
+fisc
 fissa
 fissure
 fiston
@@ -1493,6 +1502,7 @@ fondre
 fondu
 fonte
 foot
+foraine
 force
 forcer
 forfait
@@ -1646,7 +1656,6 @@ gifler
 gilet
 gin
 girafe
-girl
 gisait
 gitan
 gitane
@@ -1669,7 +1678,6 @@ gluant
 gluante
 gobelet
 gober
-gold
 golf
 gomme
 gonfle
@@ -1717,6 +1725,7 @@ griffe
 grille
 griller
 grimace
+grimpa
 grimpe
 grimper
 grippe
@@ -1770,7 +1779,6 @@ hameau
 hanche
 hangar
 hante
-hard
 hardi
 harem
 hareng
@@ -1782,8 +1790,8 @@ haussa
 hausse
 haute
 hauteur
-have
 herbe
+hernie
 heure
 heureux
 heurte
@@ -1793,7 +1801,6 @@ hic
 hideux
 hier
 hilare
-hippo
 hirsute
 hisse
 hisser
@@ -1803,7 +1810,6 @@ hochant
 hoche
 hockey
 homard
-home
 hommage
 homme
 homo
@@ -1879,6 +1885,7 @@ inceste
 inciter
 inclina
 incline
+inclus
 inconnu
 indemne
 index
@@ -1936,7 +1943,6 @@ ivrogne
 jacques
 jacuzzi
 jadis
-jaffas
 jaillir
 jaillit
 jais
@@ -1953,7 +1959,6 @@ jaune
 jazz
 jeans
 jeep
-jenny
 jet
 jeta
 jetait
@@ -1986,6 +1991,7 @@ joyau
 joyeuse
 joyeux
 juge
+jugea
 jugeait
 juger
 juif
@@ -2007,9 +2013,9 @@ jury
 jus
 juste
 justice
+kaki
 karma
 ketchup
-kid
 kilo
 kiosque
 klaxon
@@ -2017,7 +2023,6 @@ labeur
 labo
 lac
 lacet
-lady
 lagune
 laid
 laide
@@ -2065,7 +2070,6 @@ lequel
 les
 lessive
 lettre
-leu
 leurs
 leva
 levait
@@ -2080,7 +2084,6 @@ licence
 lien
 lierre
 lieu
-light
 ligne
 ligue
 lilas
@@ -2286,7 +2289,9 @@ mer
 merci
 merdier
 merlan
+merle
 mes
+mesquin
 message
 messe
 messire
@@ -2334,13 +2339,13 @@ mirage
 miroir
 mis
 mise
+miser
 miss
 missile
 mission
 mitard
 miteux
 mixte
-mlle
 mobile
 moche
 mode
@@ -2357,6 +2362,7 @@ moins
 moisir
 moisson
 moite
+moiteur
 molle
 mollet
 mollo
@@ -2368,6 +2374,7 @@ mondain
 monde
 mondial
 monnaie
+mono
 monstre
 monta
 montage
@@ -2386,6 +2393,7 @@ morale
 morbide
 morceau
 mordait
+mordit
 mordre
 mordu
 morgue
@@ -2434,7 +2442,6 @@ museau
 musette
 musical
 musique
-must
 mutisme
 myope
 mythe
@@ -2454,6 +2461,7 @@ nature
 naturel
 naval
 navette
+navigue
 navire
 naze
 nazi
@@ -2513,7 +2521,6 @@ nuire
 nuit
 nulle
 nuque
-nurse
 nylon
 oasis
 objet
@@ -2599,8 +2606,8 @@ oublier
 ouest
 oui
 ouragan
-out
 outil
+outrage
 outre
 ouvert
 ouverte
@@ -2633,7 +2640,6 @@ panneau
 pantin
 papa
 pape
-papet
 papier
 papy
 paquet
@@ -2726,7 +2732,6 @@ pendent
 pendre
 pendu
 pendule
-penny
 pensa
 pensais
 pensant
@@ -2844,7 +2849,6 @@ plat
 plate
 plateau
 platine
-please
 plein
 pleine
 pleura
@@ -3092,6 +3096,7 @@ ravage
 ravi
 ravin
 ravir
+rayer
 rayon
 rayure
 rebelle
@@ -3271,7 +3276,6 @@ rocher
 rock
 rogne
 roi
-roll
 romain
 romaine
 roman
@@ -3358,6 +3362,7 @@ sanglot
 sanguin
 sans
 saoule
+saouler
 sapin
 sas
 satin
@@ -3452,7 +3457,6 @@ sexe
 sexuel
 sexy
 shabbat
-shit
 shoote
 short
 sida
@@ -3468,7 +3472,6 @@ signal
 signaux
 signe
 signer
-signor
 silence
 sillage
 sillon
@@ -3544,6 +3547,7 @@ soulage
 souleva
 soulier
 soumis
+soumise
 soupe
 souper
 soupir
@@ -3568,9 +3572,7 @@ soyeux
 spasme
 spatial
 spectre
-speed
 sperme
-spider
 sport
 sportif
 square
@@ -3643,7 +3645,6 @@ tabac
 table
 tableau
 tablier
-tac
 tache
 tact
 taille
@@ -3685,7 +3686,6 @@ taureau
 taux
 taverne
 taxi
-team
 teint
 teinte
 tel
@@ -3732,7 +3732,6 @@ tigre
 tilleul
 timbre
 timide
-timing
 tira
 tirage
 tirait
@@ -3832,6 +3831,7 @@ tribune
 triche
 tricher
 tricot
+trinque
 trio
 tripe
 triple
@@ -3923,6 +3923,7 @@ vareuse
 vas
 vase
 vaste
+vaudou
 vaurien
 vautour
 vedette
@@ -4055,6 +4056,7 @@ volet
 voleur
 voleuse
 volume
+volute
 vomi
 vomir
 vont
@@ -4082,12 +4084,10 @@ wagon
 western
 whisky
 yacht
-yang
 yankee
 yaourt
 yeux
 yoga
-zanzi
 zen
 zinc
 zingaro

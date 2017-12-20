@@ -2,7 +2,7 @@ GEN=$(CURDIR)/src/genwordlist
 LEXFILE=$(CURDIR)/lexique/Lexique381.txt
 NONASCII_FLAGS=--char-regex=[a-zàéîôùç]
 NODICE_FLAGS=--no-print-dices
-FLAGS=-d
+FLAGS=-d -x $(CURDIR)/lexique/exclude_words.txt
 
 .PHONY: wordlists extras all clean_all
 
@@ -26,7 +26,7 @@ wordlist_fr_4k.txt: $(LEXFILE)
 	$(GEN) --limit=4096 -M7 -V5 $< -o $@ $(FLAGS) $(NODICE_FLAGS)
 
 wordlist_fr_4k_nonascii.txt: $(LEXFILE)
-	$(GEN) --limit=4096 -M6 -V5 $< -o $@ $(FLAGS) $(NONASCII_FLAGS) $(NODICE_FLAGS)
+	$(GEN) --limit=4096 -M6 -V6 $< -o $@ $(FLAGS) $(NONASCII_FLAGS) $(NODICE_FLAGS)
 
 wordlist_fr_4d.txt: $(LEXFILE)
 	$(GEN) -n4 -M5 -V4 $< -o $@ $(FLAGS)

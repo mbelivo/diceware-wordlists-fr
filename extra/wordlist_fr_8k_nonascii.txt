@@ -45,6 +45,7 @@ absolu
 absorbe
 absorber
 absoudre
+absous
 abstenir
 abstrait
 absurde
@@ -173,7 +174,6 @@ affront
 affronte
 affut
 africain
-aga
 agaçait
 agaçant
 agace
@@ -206,6 +206,7 @@ agresse
 agresser
 agressif
 agricole
+agripper
 ahuri
 aidait
 aidant
@@ -306,6 +307,7 @@ amené
 amener
 amer
 amertume
+ameuter
 ami
 amiable
 amical
@@ -331,7 +333,7 @@ amusante
 amuse
 amuser
 amusera
-ana
+anal
 analogue
 analyse
 analyser
@@ -389,6 +391,7 @@ aperçut
 apéro
 apeuré
 apitoyer
+aplati
 aplatir
 aplomb
 apogée
@@ -485,6 +488,7 @@ arrose
 arroser
 arrosoir
 arsenal
+arsenic
 art
 arthrite
 article
@@ -587,6 +591,7 @@ aucun
 aucune
 audace
 audience
+auditeur
 audition
 augmente
 augure
@@ -614,6 +619,7 @@ aux
 avait
 avala
 avalait
+avalant
 avale
 avaler
 avança
@@ -665,7 +671,6 @@ axe
 azur
 babine
 babiole
-baby
 bac
 bachot
 bacon
@@ -701,6 +706,7 @@ balancer
 balayage
 balayait
 balayant
+balaye
 balayer
 balbutia
 balcon
@@ -794,7 +800,6 @@ beauté
 bébé
 bec
 bécane
-because
 bée
 béguin
 beige
@@ -855,6 +860,7 @@ bile
 billard
 bille
 billet
+billot
 bingo
 bio
 biologie
@@ -1004,7 +1010,6 @@ bouton
 boxe
 boxer
 boxeur
-boy
 boyard
 boyau
 bracelet
@@ -1030,7 +1035,6 @@ brave
 braver
 bravo
 bravoure
-break
 brebis
 bref
 bretelle
@@ -1301,6 +1305,7 @@ causait
 causant
 cause
 causer
+causera
 caution
 cavale
 cavaler
@@ -1542,6 +1547,7 @@ clair
 clairon
 clameur
 clan
+clap
 clapotis
 claqua
 claquait
@@ -1799,6 +1805,7 @@ corbeau
 cordage
 corde
 cordon
+coréen
 coriace
 corne
 cornet
@@ -1964,6 +1971,7 @@ crime
 criminel
 criquet
 crise
+crispe
 crisper
 crisse
 cristal
@@ -2075,7 +2083,6 @@ date
 dater
 dauphin
 dauphine
-deal
 dealer
 débat
 débattu
@@ -2473,7 +2480,6 @@ druide
 duc
 duce
 duchesse
-ducon
 due
 duel
 dument
@@ -2502,6 +2508,7 @@ dynastie
 éblouir
 éboulis
 ébranla
+ébranle
 écaille
 écart
 écarta
@@ -2584,6 +2591,7 @@ effusion
 égaler
 égard
 égarer
+égayer
 église
 ego
 égorge
@@ -2637,6 +2645,7 @@ embryon
 émis
 emmena
 emmenait
+emmenant
 emmener
 emmenons
 émoi
@@ -2724,6 +2733,7 @@ englouti
 engrais
 engueule
 énigme
+enivre
 enjamber
 enjeu
 enjoué
@@ -2893,6 +2903,7 @@ estime
 estimer
 estomac
 estrade
+estuaire
 étable
 établi
 établir
@@ -2930,6 +2941,7 @@ etc
 étonne
 étonner
 étouffe
+étourdi
 étrange
 étreint
 étrier
@@ -3182,6 +3194,7 @@ fichu
 fiction
 fief
 fiel
+fiente
 fier
 fierté
 fiesta
@@ -3425,6 +3438,7 @@ frôler
 fromage
 fronça
 froncé
+fronde
 front
 fronton
 frotta
@@ -3436,6 +3450,7 @@ frousse
 fruit
 frusques
 fruste
+frustré
 fugace
 fugitif
 fugitive
@@ -3584,7 +3599,6 @@ gilet
 gilles
 gin
 girafe
-girl
 gisait
 gitan
 gitane
@@ -3627,7 +3641,6 @@ gober
 godasse
 godet
 gogo
-gold
 golden
 golf
 gombo
@@ -3678,6 +3691,7 @@ grandir
 grange
 granit
 grappe
+grappin
 gras
 grasse
 gratin
@@ -3813,7 +3827,7 @@ hante
 hanter
 hantise
 harceler
-hard
+harde
 hardi
 harem
 hareng
@@ -3834,7 +3848,6 @@ hautain
 hautaine
 haute
 hauteur
-have
 havre
 hébreu
 hectare
@@ -3865,7 +3878,6 @@ hier
 hilarant
 hilare
 hippie
-hippo
 hirsute
 hisse
 hisser
@@ -3878,7 +3890,6 @@ hochant
 hoche
 hockey
 homard
-home
 homicide
 hommage
 homme
@@ -3979,6 +3990,7 @@ immature
 immense
 immeuble
 imminent
+immiscer
 immobile
 immonde
 immoral
@@ -4008,6 +4020,7 @@ impulsif
 impur
 inapte
 incarne
+incarner
 incendie
 inceste
 incident
@@ -4062,6 +4075,7 @@ injecter
 injure
 injuste
 innocent
+inondait
 inonde
 inonder
 inquiet
@@ -4136,7 +4150,6 @@ irritant
 irrite
 irriter
 isabelle
-isba
 islam
 isole
 isoler
@@ -4154,7 +4167,6 @@ jacter
 jacuzzi
 jade
 jadis
-jaffas
 jaillir
 jaillit
 jais
@@ -4273,7 +4285,6 @@ kermesse
 ketchup
 keuf
 kibboutz
-kid
 kif
 kilo
 kimono
@@ -4287,7 +4298,6 @@ labour
 labourer
 lac
 lacet
-lady
 lagune
 laid
 laide
@@ -4337,6 +4347,7 @@ largue
 larguer
 larme
 larve
+larynx
 las
 lasagnes
 laser
@@ -4366,7 +4377,6 @@ lécher
 leçon
 lecteur
 lecture
-ledit
 légal
 légende
 léger
@@ -4387,7 +4397,6 @@ lesquels
 lessive
 lester
 lettre
-leu
 leurs
 leva
 levait
@@ -4414,7 +4423,6 @@ lien
 lierre
 liesse
 lieu
-light
 ligne
 lignée
 ligoter
@@ -4888,12 +4896,10 @@ missel
 missile
 mission
 missive
-mister
 mitan
 mitard
 miteux
 mixte
-mlle
 mobile
 mobilier
 moche
@@ -5055,7 +5061,6 @@ musette
 musical
 musicien
 musique
-must
 musulman
 mutant
 mutation
@@ -5129,7 +5134,6 @@ neurone
 neutre
 neuve
 neveu
-new
 nez
 niais
 nibard
@@ -5210,7 +5214,6 @@ nullité
 numéro
 nuptial
 nuque
-nurse
 nylon
 nymphe
 oasis
@@ -5256,6 +5259,7 @@ oculaire
 odeur
 odieuse
 odieux
+odorante
 odorat
 oeil
 oeillet
@@ -5369,8 +5373,8 @@ ouistiti
 ouragan
 ourlet
 ourson
-out
 outil
+outrage
 outre
 ouvert
 ouverte
@@ -5388,7 +5392,6 @@ ovni
 oyez
 pacha
 pacte
-paddy
 paella
 paf
 pagaille
@@ -5425,7 +5428,6 @@ pantalon
 pantin
 papa
 pape
-papet
 papier
 papillon
 papy
@@ -5583,7 +5585,6 @@ pendule
 pénible
 péniche
 pénis
-penny
 pensa
 pensais
 pensant
@@ -5789,7 +5790,6 @@ plate
 plateau
 platine
 plaza
-please
 plein
 pleine
 pleura
@@ -5806,6 +5806,7 @@ pli
 plia
 pliait
 plier
+plissant
 plomb
 plombe
 plombier
@@ -5843,6 +5844,7 @@ pointer
 pointu
 pointure
 poire
+poirier
 poison
 poisse
 poisseux
@@ -6123,6 +6125,7 @@ puisait
 puiser
 puissant
 pull
+pulpe
 pulsion
 punaise
 punch
@@ -6140,6 +6143,7 @@ pureté
 purger
 purifie
 purifier
+putois
 putsch
 puzzle
 pyjama
@@ -6220,6 +6224,7 @@ raisin
 raison
 raisonne
 rajeuni
+rajeunir
 rajoute
 rajouter
 ralentir
@@ -6293,6 +6298,7 @@ ravi
 ravin
 ravioli
 ravir
+ravoir
 rayer
 rayon
 rayonne
@@ -6536,6 +6542,7 @@ repart
 repartez
 reparti
 repartir
+reparut
 repas
 repasse
 repasser
@@ -6745,7 +6752,6 @@ rôder
 rogne
 roi
 rôle
-roll
 romain
 romaine
 roman
@@ -6953,6 +6959,7 @@ savoir
 savons
 savoure
 savourer
+sbire
 scalpel
 scandale
 scanner
@@ -6973,7 +6980,6 @@ scotch
 scout
 scribe
 script
-scrubs
 scrupule
 scrute
 scruter
@@ -7081,8 +7087,6 @@ sexy
 shabbat
 shérif
 sheriff
-sherry
-shit
 shoote
 shooter
 shopping
@@ -7109,7 +7113,6 @@ signe
 signer
 signerai
 signifie
-signor
 signora
 silence
 silex
@@ -7152,6 +7155,7 @@ soif
 soignait
 soigne
 soigner
+soigneux
 soin
 soir
 soirée
@@ -7279,10 +7283,8 @@ speaker
 spécial
 spectre
 speech
-speed
 sperme
 sphinx
-spider
 spirale
 sponsor
 sport
@@ -7318,7 +7320,6 @@ stresser
 strict
 strident
 string
-strip
 studio
 stupeur
 stupide
@@ -7392,6 +7393,7 @@ sursis
 survient
 survint
 survit
+survive
 survivra
 suscite
 susciter
@@ -7418,7 +7420,6 @@ tableau
 tablette
 tablier
 tabouret
-tac
 tache
 tacher
 tacite
@@ -7456,7 +7457,9 @@ taper
 tapette
 tapin
 tapis
+tapota
 tapotait
+tapotant
 tapote
 taquine
 taquiner
@@ -7487,7 +7490,6 @@ taux
 taverne
 taxe
 taxi
-team
 teindre
 teint
 teinte
@@ -7571,7 +7573,6 @@ tilleul
 tilt
 timbre
 timide
-timing
 tinter
 tira
 tirade
@@ -7634,6 +7635,7 @@ torrent
 torride
 torse
 tort
+tortille
 tortue
 torture
 torturer
@@ -7966,6 +7968,7 @@ verglas
 vergogne
 vérifie
 vérité
+vermeil
 vermine
 vermouth
 vernis
@@ -8170,14 +8173,11 @@ western
 whisky
 yacht
 yack
-yang
 yankee
 yaourt
 yen
 yeux
-yin
 yoga
-zanzi
 zen
 zénith
 zéro

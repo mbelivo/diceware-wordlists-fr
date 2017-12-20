@@ -42,12 +42,12 @@ peuvent donc être préférées quand on tire beaucoup de mots dans une liste.
 
 fichier                   | mots | non ascii | avg len | bit/mot | bit/car
 --------------------------|------|-----------|---------|---------|--------
-wordlist_fr_5d            | 7776 |         0 |    6.72 |    12.9 |     1.9
-wordlist_fr_5d_nonascii   | 7776 |       953 |    6.31 |    12.9 |     2.0
-wordlist_fr_4k            | 4096 |         0 |    5.76 |    12.0 |     2.1
-wordlist_fr_4k_nonascii   | 4096 |       278 |    5.19 |    12.0 |     2.3
-wordlist_fr_4d            | 1296 |         0 |    4.47 |    10.3 |     2.3
-wordlist_fr_4d_2          | 1296 |         0 |    7.04 |    10.3 |     1.5
+wordlist_fr_5d            | 7776 |         0 |    6.74 |    12.9 |     1.9
+wordlist_fr_5d_nonascii   | 7776 |       959 |    6.32 |    12.9 |     2.0
+wordlist_fr_4k            | 4096 |         0 |    5.77 |    12.0 |     2.1
+wordlist_fr_4k_nonascii   | 4096 |       280 |    5.20 |    12.0 |     2.3
+wordlist_fr_4d            | 1296 |         0 |    4.48 |    10.3 |     2.3
+wordlist_fr_4d_2          | 1296 |         0 |    7.05 |    10.3 |     1.5
 
 _bit/mot_: entropie par mot tiré dans la liste de mot (dépends uniquement du nombre de mots dans la
 liste)
