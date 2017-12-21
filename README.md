@@ -20,32 +20,18 @@ Les paramètres utilisés pour générer ces listes sont visible dans le fichier
 
 Les types de liste sont:
 
-* __4k__: listes de 4096 mots pour utilisation purement logiciel
+* __4k__: listes de 4096 mots pour utilisation purement logiciel (à la xkcd)
 * __5d__: listes de 7776 mots pour diceware 5 dés, comparable à la liste large de l'eff
 * __4d__: listes de 1296 mots pour diceware 4 dés, comparable à la liste short_1 de l'eff
 * __4d_2__: listes de 1296 mots pour diceware 4 dés, avec racine unique de 3 caractères
 	et distance d'édition d'au moins 3, comparable à la liste short_2 de l'eff
-
-### nonascii
-
-Contrairement aux listes standards qui contiennent uniquement des mots composés des lettres ascii
-([a-z]), les listes _nonascii ont des mots pouvant contenir également les lettres *àéîôùç*. Ces
-lettres ont été choisies pour leur relative facilité à être tapées sur un clavier français physique
-ou virtuel (sur clavier android standard, toutes ces lettres sont accessible par un appui prolongé
-sur la lettre ascii correspondante).
-
-Les listes _nonascii ont tendance à avoir une longueur de mot moyenne légèrement inférieure à leurs
-équivalent ascii, puisqu'elles ont été générées avec une taille de mot maximum inférieure. Elles
-peuvent donc être préférées quand on tire beaucoup de mots dans une liste.
 
 ### Statistiques
 
 fichier                   | mots | non ascii | avg len | bit/mot | bit/car
 --------------------------|------|-----------|---------|---------|--------
 wordlist_fr_5d            | 7776 |         0 |    6.74 |    12.9 |     1.9
-wordlist_fr_5d_nonascii   | 7776 |       959 |    6.32 |    12.9 |     2.0
 wordlist_fr_4k            | 4096 |         0 |    5.77 |    12.0 |     2.1
-wordlist_fr_4k_nonascii   | 4096 |       280 |    5.20 |    12.0 |     2.3
 wordlist_fr_4d            | 1296 |         0 |    4.48 |    10.3 |     2.3
 wordlist_fr_4d_2          | 1296 |         0 |    7.05 |    10.3 |     1.5
 
@@ -80,7 +66,7 @@ Il est toutefois possible de spécifier un nombre de mots à tirer par rolldice.
 **Disclaimer**: je n'ai aucune formation ou réelle compétence en crypto ou en théorie de
 l'information. L'anssi
 [dit](https://www.ssi.gouv.fr/administration/precautions-elementaires/calculer-la-force-dun-mot-de-passe/)
-que en dessous de 80 bits d'entropie c'est de la daube.
+que en dessous de 80 bits d'entropie, c'est faible.
 
 Le site original de [diceware](diceware.com) et l'article de l'eff conseillent 6 mots depuis une
 liste _5d_ (77.5 bits) ou 8 mots depuis une liste _4d_ (82.7 bits). xkcd parle de 44 bits d'entropie
