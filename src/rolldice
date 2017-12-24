@@ -29,7 +29,7 @@ class Wordlist():
 
 
 def wordlist_from_file(wordfile):
-    is_diceware = bool(re.fullmatch('[1-6]+ [\w \'-]+', wordfile.readline().strip()))
+    is_diceware = bool(re.fullmatch('[1-6]+\s[\w \'-]+', wordfile.readline().strip()))
     wordfile.seek(0)
 
     if is_diceware:
