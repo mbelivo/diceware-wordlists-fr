@@ -42,7 +42,7 @@ _bit/car_: entropie par caractère, en moyenne. Plus cette valeur est grande, mo
 caractères dans les passphrases généré, en moyenne, à entropie égale.
 
 (D'autres listes avec des caratèristiques différentes sont disponibles dans le
-[dossier extra](extra/).
+[dossier extra](extra/).)
 
 ## Générer des passphrases
 
