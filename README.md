@@ -41,6 +41,9 @@ liste)
 _bit/car_: entropie par caractère, en moyenne. Plus cette valeur est grande, moins il y aura de
 caractères dans les passphrases généré, en moyenne, à entropie égale.
 
+(D'autres listes avec des caratèristiques différentes sont disponibles dans le
+[dossier extra](extra/).
+
 ## Générer des passphrases
 
 Un générateur de passphrase, [rolldice](src/rolldice), est disponible dans le dossier src.
